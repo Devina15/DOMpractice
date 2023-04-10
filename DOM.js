@@ -12,3 +12,12 @@ header.style.border = "solid 3px #000";
 var abc = document.getElementsByClassName('title');
 abc[0].style.fontWeight = 'bold';
 abc[0].style.color = 'green';
+
+
+//changes made to the list 
+var items = document.getElementsByClassName('list-group-item');
+items[2].style.backgroundColor = 'green';
+items[0].style.fontWeight = 'bold';
+items[1].style.fontWeight = 'bold';
+items[2].style.fontWeight = 'bold';
+items[3].style.fontWeight = 'bold';
