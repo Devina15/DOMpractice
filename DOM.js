@@ -31,3 +31,19 @@ items[3].style.fontWeight = 'bold';
 var li2 = document.getElementsByTagName('li');
 li2[4].style.fontFamily = 'Cursive';
 li2[4].style.color = 'red';
+
+//querySelector
+var secondItem=document.querySelector('.list-group-item:nth-child(2)');
+secondItem.style.backgroundColor='green';
+var thirdItem=document.querySelector('.list-group-item:nth-child(3)');
+thirdItem.style.visibility='hidden';
+
+//querySelectorAll
+var secItem = document.querySelectorAll('.list-group-item');
+secItem[2].style.color = "green";
+
+var odd = document.querySelectorAll('li:nth-child(odd)');
+for (var i=0;i<odd.length;i++)
+    {
+        odd[i].style.backgroundColor = 'green';
+    }
