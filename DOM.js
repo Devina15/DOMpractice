@@ -47,3 +47,21 @@ for (var i=0;i<odd.length;i++)
     {
         odd[i].style.backgroundColor = 'green';
     }
+
+//create new div element for text word 'hello' before 'Item Lister'
+var newDiv = document.createElement('Div');
+newDiv.className = 'Hello';
+var newDivText = document.createTextNode('hello');
+newDiv.appendChild(newDivText);
+var container = document.querySelector('header .container');
+var h1 = document.querySelector('header h1');
+container.insertBefore(newDiv,h1); //first 'hello' added
+
+//create new div element for text word 'hello' before 'Item 1'
+var newLi = document.createElement('li');
+newLi.className = 'list-group-item';
+var newLiText = document.createTextNode('hello');
+newLi.appendChild(newLiText);
+var container = document.querySelector('body .container #main ul');
+var li = document.querySelector('body .container #main ul li');
+container.insertBefore(newLi,li);
