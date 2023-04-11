@@ -21,3 +21,13 @@ items[0].style.fontWeight = 'bold';
 items[1].style.fontWeight = 'bold';
 items[2].style.fontWeight = 'bold';
 items[3].style.fontWeight = 'bold';
+
+//editing new li element with class name
+//gives error since no className provided
+//var li1 = document.getElementsByClassName('list-group-item');
+//li1[4].style.color = 'blue';
+
+// editing 
+var li2 = document.getElementsByTagName('li');
+li2[4].style.fontFamily = 'Cursive';
+li2[4].style.color = 'red';
