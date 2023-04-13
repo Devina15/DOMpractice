@@ -85,3 +85,27 @@ var editBtn = document.createElement('button');
 editBtn.appendChild(document.createTextNode('Edit'));
 //append button to li
 li.appendChild(editBtn);
+
+
+//filter items
+function filterItems(e){
+    //convert text to lowercase
+    var text = e.target.value.toLowerCase();
+    //get lis
+    var items = itemList.getElementsByTagName('li');
+    //convert to an array
+    Array.from(items).forEach(function(item){
+        
+        var itemNameFirst = item.firstChild.textContent;
+        
+        var children = document.getElementById('item').children;
+        var secondChild = item.childNodes[1].textContent;
+        
+        if((itemNameFirst.toLowerCase().indexOf(text)!=-1)|| (secondChild.toLowerCase().indexOf(text)!=-1))
+        {
+            item.style.display = 'block';
+        }else{
+            item.style.display = 'none';
+        }
+    })
+}
