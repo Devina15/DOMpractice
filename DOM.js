@@ -65,3 +65,23 @@ newLi.appendChild(newLiText);
 var container = document.querySelector('body .container #main ul');
 var li = document.querySelector('body .container #main ul li');
 container.insertBefore(newLi,li);
+
+//delete event
+itemList.addEventListener('click',removeItem);
+
+//remove item
+function removeItem(e){
+    if(e.target.classList.contains('delete')){
+        if(confirm('Are you sure?')){
+            var li = e.target.parentElement;
+            itemList.removeChild(li);
+            }
+    }
+}
+
+//create edit button
+var editBtn = document.createElement('button');
+//append text node
+editBtn.appendChild(document.createTextNode('Edit'));
+//append button to li
+li.appendChild(editBtn);
